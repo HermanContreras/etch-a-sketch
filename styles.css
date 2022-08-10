@@ -3,26 +3,39 @@ body {
 }
 
 body,
+.container,
 .row {
     display: flex;
 }
 
+body, 
+.container {
+    flex-direction: column;
+}
+
 body {
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container {
     justify-content: center;
     align-items: center;
+    height: 960px;
+    width: 960px;
 }
 
 .originalDiv,
 .hoverDiv {
-    width: 125px;
-    height: 125px;
-    margin: 8px;
+    width: 100px;
+    height: 100px;
+    /*margin: 8px;*/
 }
 
 .originalDiv {
-    background-color: coral;
-}
-.hoverDiv {
-    background-color: aqua;
+    background-color: black;
 }
 
+.hoverDiv {
+    background-color: white;
+}

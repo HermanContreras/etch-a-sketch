@@ -14,17 +14,18 @@ function addContainer(){
     return container;
 }
 
-function populateGrid(){
+function populateGrid(side){
 
     let container = addContainer();
-    for(let i = 0; i < 4; i++){
+    for(let i = 0; i < side; i++){
 
         let row = createNameElement('div', 'row');
-        for(let i = 0; i < 4; i ++){
+        for(let i = 0; i < side; i ++){
             row.appendChild(createNameElement('div', 'originalDiv'));
         }
         container.appendChild(row);
     }
+    changeDiv();
 }
 
 function overHelper(div){
@@ -52,5 +53,19 @@ function changeDiv(){
     );
 }
 
-populateGrid();
-changeDiv();
+function reset(){
+    input = prompt('Numer of square per side: ');
+    let container = document.querySelector('.container');
+    container.remove();
+    populateGrid(input);
+}
+
+function btn(){
+    let btn = document.querySelector('.btn');
+
+    btn.addEventListener('click', reset);
+    
+}
+
+populateGrid(4);
+btn();
