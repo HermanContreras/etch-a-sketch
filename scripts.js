@@ -14,6 +14,20 @@ function addContainer(){
     return container;
 }
 
+function changeDivSizeHelper(div,size){
+    div.style.width = `${size}px`;
+    div.style.height = `${size}px`;
+}
+
+function changeDivSize(side){
+    let originalDivs = document.querySelectorAll('.row > div'),
+        newSize = 500/side;
+
+    originalDivs.forEach( div => 
+        changeDivSizeHelper(div, newSize)
+    );
+}
+
 function populateGrid(side){
 
     let container = addContainer();
@@ -26,6 +40,7 @@ function populateGrid(side){
         container.appendChild(row);
     }
     changeDiv();
+    changeDivSize(side);
 }
 
 function overHelper(div){

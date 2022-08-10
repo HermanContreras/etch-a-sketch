@@ -21,15 +21,8 @@ body {
 .container {
     justify-content: center;
     align-items: center;
-    height: 960px;
-    width: 960px;
-}
-
-.originalDiv,
-.hoverDiv {
-    width: 100px;
-    height: 100px;
-    /*margin: 8px;*/
+    height: 500px;
+    width: 500px;
 }
 
 .originalDiv {
