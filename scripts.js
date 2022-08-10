@@ -9,8 +9,12 @@ function createNameElement(type, name){
 function addContainer(){
 
     const body = document.querySelector('body');
-    let container = createNameElement('div', 'container');
+    let container = createNameElement('div', 'container'),
+        btn = createNameElement('btn', 'btn');
+
+    btn.textContent = 'Change Squares';
     body.appendChild(container);
+    container.appendChild(btn);
     return container;
 }
 
@@ -41,6 +45,7 @@ function populateGrid(side){
     }
     changeDiv();
     changeDivSize(side);
+    btn();
 }
 
 function overHelper(div){
@@ -72,15 +77,14 @@ function reset(){
     input = prompt('Numer of square per side: ');
     let container = document.querySelector('.container');
     container.remove();
+
     populateGrid(input);
 }
 
 function btn(){
     let btn = document.querySelector('.btn');
-
-    btn.addEventListener('click', reset);
     
+    btn.addEventListener('click', reset);
 }
 
 populateGrid(4);
-btn();
