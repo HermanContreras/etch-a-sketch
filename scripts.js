@@ -53,9 +53,11 @@ function overHelper(div){
     div.classList.remove('originalDiv');
     div.classList.add('hoverDiv');
 
+    /*
     div.addEventListener('mouseout', () => {
         outHelper(div);
     })
+    */
 }
 
 function outHelper(div){
