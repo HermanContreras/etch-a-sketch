@@ -1,0 +1,28 @@
+body {
+    height: 100vh;
+}
+
+body,
+.row {
+    display: flex;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+}
+
+.originalDiv,
+.hoverDiv {
+    width: 125px;
+    height: 125px;
+    margin: 8px;
+}
+
+.originalDiv {
+    background-color: coral;
+}
+.hoverDiv {
+    background-color: aqua;
+}
+
